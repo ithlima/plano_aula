@@ -15,15 +15,15 @@ var competenciaBtn = document.querySelector('#btn-competencia')
 var habilidadeBtn = document.querySelector('#btn-habilidade')
 var planoBtn = document.querySelector('#btn-plano')
 var obsBtn = document.querySelector('#btn-obs')
-var azulBtn = document.querySelector('.but')
 var enviarBtn = document.querySelector('#btn-enviar')
 
 function aparecerTurma() {
+    //cores
     btnturma.style.background = "gray"
+
     area2.style.display = "block"
     turma.style.display = "block"
     comp.style.display = "none"
-    azulBtn.style.background = "var(--azul)"
 }
 
 function voltarTurma() {
@@ -33,14 +33,15 @@ function voltarTurma() {
     habilidades.style.display = "none"
     plano.style.display = "none"
     obs.style.display = "none"
-
     //cores
     btnturma.style.background = "gray"
     compBtn.style.background = "var(--azul)"
-    turma.style.display = "block"
     competenciaBtn.style.background = "var(--azul)"
-
+    habilidadeBtn.style.background = "var(--azul)"
+    planoBtn.style.background = "var(--azul)"
+    obsBtn.style.background = "var(--azul)"
     //aparecer
+    turma.style.display = "block"
     area2.style.display = "block"
     enviarBtn.style.cssText = 'margin-top: 0%;'
 }
@@ -56,12 +57,16 @@ function componente() {
     compBtn.style.background = "gray"
     btnturma.style.background = "var(--azul)"
     competenciaBtn.style.background = "var(--azul)"
+    habilidadeBtn.style.background = "var(--azul)"
+    planoBtn.style.background = "var(--azul)"
+    obsBtn.style.background = "var(--azul)"
+
     //aparecer
     comp.style.display = "block"
     enviarBtn.style.cssText = 'margin-top: 0%;'
 }
 
-function cmd(){
+function cmd() {
     //divs apagadas
     turma.style.display = "none"
     comp.style.display = "none"
@@ -80,9 +85,9 @@ function cmd(){
     //aparecer
     competencia.style.display = "block"
     enviarBtn.style.cssText = 'margin-top: 0%;'
-    
+
 }
-function habilidade(){
+function habilidade() {
     //divs apagadas
     turma.style.display = "none"
     comp.style.display = "none"
@@ -102,7 +107,7 @@ function habilidade(){
     habilidades.style.display = "block"
     enviarBtn.style.cssText = 'margin-top: 0%;'
 }
-function dev_plano(){
+function dev_plano() {
     //cores
     btnturma.style.background = "var(--azul)"
     compBtn.style.background = "var(--azul)"
@@ -123,7 +128,7 @@ function dev_plano(){
     enviarBtn.style.height = "100px"
     enviarBtn.style.cssText = 'margin-top: 130%;'
 }
-function observacao(){
+function observacao() {
     //divs apagadas
     turma.style.display = "none"
     comp.style.display = "none"
@@ -141,5 +146,5 @@ function observacao(){
 
     //aparecer
     obs.style.display = "grid"
-    enviarBtn.style.cssText = 'margin-top: 30%;'+'height: 50px;'
+    enviarBtn.style.cssText = 'margin-top: 30%;' + 'height: 50px;'
 }
