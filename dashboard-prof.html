@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+
+</head>
+
+<body>
+    <div class="sidebar">
+        <header>
+            SIGE
+        </header>
+        <div class="sidebar-nav">
+
+            <div class="foto">
+                <img src="ft1.jpg" alt="" class="perfil">
+                <div class="nome-foto">
+                    Nome
+                </div>
+            </div>
+            <div class="menus">
+                <li><img src="direita.png" alt=""> <a href="">Plano de aula</a></li>
+                <li><img src="direita.png" alt=""> <a href="">Registro de Atividade</a></li>
+                <li><img src="direita.png" alt=""> <a href="">Frequência diária</a></li>
+            </div>
+            <div class="menus2">
+                <div class="controller">
+                    <p class="controle">Controle de notas </p>
+                    <img src="seta.png" alt="" class="seta">
+                </div>
+                <li><img src="direita.png" alt=""> <a href="#">Notas</a></li>
+                <li><img src="direita.png" alt=""> <a href="">Média Final</a></li>
+                </li>
+            </div>
+
+        </div>
+    </div>
+    <div class="barra-h">
+        <div class="titulo-h">
+            <p>Diário Ensino Fundamental</p>
+
+        </div>
+        <div class="sme">
+            <p>SME MARANGUAPE</p>
+        </div>
+    </div>
+    <div class="area">
+        <div class="titulo">
+            <div class="nome-pesquisa">
+                Pesquisar
+            </div>
+            <div class="btn-inicio">
+                <button class="but" onclick="aparecerTurma()" id="btn-mais">
+                    +
+                </button>
+                <button class="but">
+                    filtro
+                </button>
+            </div>
+        </div>
+        <div class="formulario">
+            <form method="post">
+                <label for="data-i">Data inicial</label>
+                <input type="date" name="data-i" class="datai">
+                <label for="data-f">Data final</label>
+                <input type="date" name="data-f" id="" class="dataf">
+                <label for="mes">Mês</label>
+                <select name="mes" id="mes" class="mes">
+                    <option value="1">Janeiro</option>
+                    <option value="2">Fevereiro</option>
+                    <option value="3">Março</option>
+                    <option value="4">Abril</option>
+                    <option value="5">Maio</option>
+                    <option value="6">Junho</option>
+                    <option value="7">Julho</option>
+                    <option value="8">Agosto</option>
+                    <option value="9">Setembro</option>
+                    <option value="10">Outubro</option>
+                    <option value="11">Novembro</option>
+                    <option value="12">Dezembro</option>
+                </select>
+                <label for="escola">Escola</label>
+                <select name="escola" id="escola" class="escola">
+                    <option value="1">Salaberga</option>
+                    <option value="2">Manoel Rodrigues</option>
+                    <option value="3">CSJ</option>
+                </select>
+                <label for="turma">Turma</label>
+                <select name="turma" id="turma" class="turma">
+                    <option value="1">1° ano</option>
+                    <option value="2">2° ano</option>
+                    <option value="3">3° ano</option>
+                </select>
+                <input type="submit" value="Buscar" name="btn-buscar" class="but">
+                <input type="submit" value="Limpar" name="btn-limpar" class="but">
+            </form>
+        </div>
+        <div class="pdf">
+            <button class="but">pdf</button>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>DATA INICIAL</th>
+                    <th>DATA FINAL</th>
+                    <th>ESCOLA</th>
+                    <th>TURMA</th>
+                    <th style="border-right: none;">COMPONENTE CURRICULAR</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>01/02/2023</td>
+                    <td>30/02/2023</td>
+                    <td>EEEP Salaberga Torquato Gomes de Matos</td>
+                    <td>3°B</td>
+                    <td style="border-right: none;">Matemática</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>01/02/2023</td>
+                    <td>30/02/2023</td>
+                    <td>EEEP Salaberga Torquato Gomes de Matos</td>
+                    <td>3°B</td>
+                    <td style="border-right: none;">Matemática</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="passador">
+            <button class="but">&larr;&larr;</button>
+            <button class="but">&larr;</button>
+            <button class="but" style="width: 40px;">1</button>
+            <button class="but">&rarr;</button>
+            <button class="but">&rarr;&rarr;</button>
+            <select name="pag" id="">
+                <option value="1">1</option>
+            </select>
+        </div>
+    </div>
+    <div class="area2">
+        <div class="titulo">
+            <div class="nome-pesquisa">
+                Cadastro Planejamento
+            </div>
+            <div class="btn-inicio">
+                <button class="but">
+                    Salvar
+                </button>
+                <button class="but">
+                    Pesquisar
+                </button>
+            </div>
+        </div>
+        <div class="formulario-2">
+            <form method="post">
+                <label for="data-i">Data inicial</label>
+                <input type="date" name="data-i" class="datai">
+                <label for="data-f">Data final</label>
+                <input type="date" name="data-f" id="" class="dataf">
+                
+
+                <div class="modal-menus">
+                    <label for="escola">Escola</label>
+                    <select name="escola" id="escola" class="escola">
+                        <option value="1">Salaberga</option>
+                        <option value="2">Manoel Rodrigues</option>
+                        <option value="3">CSJ</option>
+                    </select>
+                    <label for="turma">Turma</label>
+                    <select name="turma" id="turma" class="turma">
+                        <option value="1">1° ano</option>
+                        <option value="2">2° ano</option>
+                        <option value="3">3° ano</option>
+                    </select>
+                </div>
+                <div class="modal-menus2">
+                    <label for="comp-curricular">Componente Curricular</label>
+                    <select name="componente" id="comp-curricular">
+                        <option value=""></option>
+                    </select>
+                </div>
+                <div class="modal-menus3">
+                    <label for="competencia">Competência Específica</label>
+                    <select name="competencia" id="competencia">
+                        <option value=""></option>
+                    </select>
+                </div>
+                <div class="modal-menus4">
+                    <label for="habilidade">Habilidades</label>
+                    <select name="habilidade" id="habilidade">
+                        <option value=""></option>
+                    </select>
+                </div>
+                <div class="modal-menus5">
+                    <label for="dev-plano">ALgumma coisa</label>
+                    <textarea name="" id="dev-plano" cols="30" rows="7"></textarea>
+                    <label for="dev-plano2">Atividades xvzxvzxv</label>
+                    <textarea name="" id="dev-plano" cols="30" rows="7"></textarea>
+                    <label for="dev-plano3">Metodologia</label>
+                    <textarea name="" id="dev-plano" cols="30" rows="7"></textarea>
+                    <label for="dev-plano4">Avaliação</label>
+                    <textarea name="" id="dev-plano" cols="30" rows="7"></textarea>
+                    
+                </div>
+                <div class="modal-menus6">
+                    <label for="obs">Observações</label>
+                    <textarea name="" id="" cols="30" rows="7"></textarea>
+                </div>
+                <input type="submit" class="but" value="Enviar" id="btn-enviar">
+            </form>
+            <div class="butoes">
+                <button class="but" id="btn-turma" onclick="voltarTurma()">Turma</button>
+                <button class="but" id="btn-comp" onclick="componente()">COMPONENTES CURRICULARES</button>
+                <button class="but" id="btn-competencia" onclick="cmd()">COMPETÊNCIAS</button>
+                <button class="but" id="btn-habilidade" onclick="habilidade()">HABILIDADES</button>
+                <button class="but" id="btn-plano" onclick="dev_plano()">DESENVOLVIMENTO DO PLANO</button>
+                <button class="but" id="btn-obs" onclick="observacao()">OBSERVAÇÃO</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
