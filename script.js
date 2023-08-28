@@ -57,7 +57,7 @@ function componente() {
     compBtn.style.background = "gray"
     btnturma.style.background = "var(--azul)"
     competenciaBtn.style.background = "var(--azul)"
-    habilidadeBtn.style.background = "var(--azul)"
+    habilidadesBtn.style.background = "var(--azul)"
     planoBtn.style.background = "var(--azul)"
     obsBtn.style.background = "var(--azul)"
 
