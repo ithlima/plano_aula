@@ -27,6 +27,7 @@ body {
     float: left;
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.360);
     padding: 10px;
+    position: fixed;
 }
 
 .perfil {
@@ -71,6 +72,7 @@ header {
 .barra-h {
     height: 30px;
     padding: 10px;
+    padding-left: 335px;
     background-color: var(--azul);
     display: flex;
     font-size: 1.2rem;
@@ -87,8 +89,6 @@ header {
 
 li {
     padding: 10px;
-    border: 2px solid white;
-    background-color: var(--azul);
     border-radius: 0px 8px 0 8px;
 }
 
@@ -97,7 +97,7 @@ a {
     color: white;
 }
 
-li:hover {
+.menu-items:hover {
     transform: translateY(5px);
     transition: .5s;
 }
@@ -157,6 +157,7 @@ form {
     padding: 5px;
     border: none;
     border-radius: 3px;
+    cursor: pointer;
 }
 
 table {
@@ -166,6 +167,7 @@ table {
     width: 100%;
     border-collapse: collapse;
 }
+
 th,
 td {
     border: 1px solid black;
@@ -181,7 +183,8 @@ td {
     margin-top: 10px;
     text-align: center;
 }
-.area2{
+
+.area2 {
     margin-top: 50px;
     margin-left: 35%;
     background-color: white;
@@ -193,13 +196,103 @@ td {
     border-top: 2px solid blue;
     display: none;
 }
-.modal-menus2,.modal-menus3,.modal-menus4,.modal-menus5,.modal-menus6{
+
+.modal-menus2,
+.modal-menus3,
+.modal-menus4,
+.modal-menus5,
+.modal-menus6 {
     display: none;
 }
-.butoes{
+
+.butoes {
     margin-top: 50px;
 }
-textarea{
+
+textarea {
     resize: none;
 }
 
+@media (max-width: 960px) {
+    .sidebar {
+        width: 200px;
+    }
+    .area {
+        margin-top: 50px;
+        background-color: white;
+        width: 500px;
+        min-height: 100px;
+        max-height: 100%;
+        padding: 20px;
+        border-radius: 5px;
+        border-top: 2px solid blue;
+    }
+
+    .area2 {
+        margin-top: 50px;
+        background-color: white;
+        width: 500px;
+        min-height: 100px;
+        max-height: 100%;
+        padding: 20px;
+        border-radius: 5px;
+        border-top: 2px solid blue;
+        display: none;
+    }
+    .butoes{
+        display: grid;
+        gap: 10px;
+        grid-template-columns: 1fr 1fr;
+    }
+    .barra-h{
+    height: 30px;
+    padding: 10px;
+    padding-left: 210px;
+    background-color: var(--azul);
+    display: flex;
+    font-size: 1.2rem;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.360);
+    justify-content: space-between;
+    }
+}
+th{
+    padding: 5px;
+}
+@media (max-height:950px){
+    .area2{
+        max-height: 1000px;
+        margin-top: 100px;
+    }
+}
+@media (max-height:600px){
+.sidebar{
+    position: relative;
+    height: 1690px;
+}
+.barra-h{
+    font-size: 1.1rem;
+    padding-left: 0px;
+}
+.passador{
+    margin-top: 70px;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: white;
+}
+}
+#btn-enviar{
+    margin-top: 10px;
+}
+.menus2 ul li{
+    gap: 15px;
+    list-style: none;
+    transition: .5s;
+}
+.notas-drop{
+    transition: 1s;
+    display: none;
+}
+.menus2:hover .notas-drop{
+    display: grid;
+    gap: 15px;
+}
