@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="dashboard.css">
-
 </head>
 
 <body>
@@ -23,20 +22,20 @@
                 </div>
             </div>
             <div class="menus">
-                <li><img src="direita.png" alt=""> <a href="">Plano de aula</a></li>
-                <li><img src="direita.png" alt=""> <a href="">Registro de Atividade</a></li>
-                <li><img src="direita.png" alt=""> <a href="">Frequência diária</a></li>
+                <li class="menu-items"><a href="">Plano de aula</a><img src="img/sala-de-aula.png" alt="" style="margin: 0px 0 0 10px;"></li>
+                <li class="menu-items"><a href="">Registro de Atividade</a><img src="img/livro.png" alt="" style="margin: 0px 0 0 10px;"></li>
+                <li class="menu-items"><a href="">Frequência diária</a><img src="img/aula-online.png" alt="" style="margin: 0px 0 0 10px;"></li>
             </div>
             <div class="menus2">
-                <div class="controller">
-                    <p class="controle">Controle de notas </p>
-                    <img src="seta.png" alt="" class="seta">
-                </div>
-                <li><img src="direita.png" alt=""> <a href="#">Notas</a></li>
-                <li><img src="direita.png" alt=""> <a href="">Média Final</a></li>
-                </li>
+                <ul class="notas"><li style="color: white;"> Controle de Notas <img src="img/escrita.png" alt="" style="margin: 0px 0 0 10px;">
+                    <ul class="notas-drop">
+                        <li class="menu-items"><a href="">Notas</a></li>
+                        <li class="menu-items"><a href="">Média Final</a></li>
+                    </ul>
+                    </li>
+                    
+                </ul>
             </div>
-
         </div>
     </div>
     <div class="barra-h">
@@ -115,20 +114,10 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>1</td>
-                    <td>01/02/2023</td>
-                    <td>30/02/2023</td>
-                    <td>EEEP Salaberga Torquato Gomes de Matos</td>
-                    <td>3°B</td>
-                    <td style="border-right: none;">Matemática</td>
+
                 </tr>
                 <tr>
-                    <td>1</td>
-                    <td>01/02/2023</td>
-                    <td>30/02/2023</td>
-                    <td>EEEP Salaberga Torquato Gomes de Matos</td>
-                    <td>3°B</td>
-                    <td style="border-right: none;">Matemática</td>
+
                 </tr>
             </tbody>
         </table>
@@ -149,11 +138,11 @@
                 Cadastro Planejamento
             </div>
             <div class="btn-inicio">
-                <button class="but">
+                <!--<button class="but">
                     Salvar
-                </button>
-                <button class="but">
-                    Pesquisar
+                </button> -->
+                <button class="but" onclick="fechar()">
+                    Fechar
                 </button>
             </div>
         </div>
@@ -163,56 +152,150 @@
                 <input type="date" name="data-i" class="datai">
                 <label for="data-f">Data final</label>
                 <input type="date" name="data-f" id="" class="dataf">
-                
 
-                <div class="modal-menus">
-                    <label for="escola">Escola</label>
-                    <select name="escola" id="escola" class="escola">
-                        <option value="1">Salaberga</option>
-                        <option value="2">Manoel Rodrigues</option>
-                        <option value="3">CSJ</option>
-                    </select>
-                    <label for="turma">Turma</label>
-                    <select name="turma" id="turma" class="turma">
-                        <option value="1">1° ano</option>
-                        <option value="2">2° ano</option>
-                        <option value="3">3° ano</option>
-                    </select>
-                </div>
+                <form action="" method="post">
+                    <div class="modal-menus">
+                        <label for="escola">Escola</label>
+                        <select name="escola" id="escola" class="escola">
+                            <option value="1">Salaberga</option>
+                            <option value="2">Manoel Rodrigues</option>
+                            <option value="3">CSJ</option>
+                        </select>
+
+                        <label for="turma">Turma</label>
+                        <select name="turma" id="turma" class="turma">
+                            <option value="1">1° ano</option>
+                            <option value="2">2° ano</option>
+                            <option value="3">3° ano</option>
+                        </select>
+
+                        <input type="submit" class="but" value="Enviar" id="btn-enviar" name="btn-enviar1">
+
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>DATA INICIAL</th>
+                                    <th>DATA FINAL</th>
+                                    <th>ESCOLA</th>
+                                    <th>TURMA</th>
+                                    <th style="border-right: none;">COMPONENTE CURRICULAR</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+
+                                </tr>
+                                <tr>
+
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </form>
                 <div class="modal-menus2">
                     <label for="comp-curricular">Componente Curricular</label>
                     <select name="componente" id="comp-curricular">
                         <option value=""></option>
                     </select>
+                    <input type="submit" class="but" value="Enviar" id="btn-enviar" name="btn-enviar1">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>DATA INICIAL</th>
+                                <th>DATA FINAL</th>
+                                <th>ESCOLA</th>
+                                <th>TURMA</th>
+                                <th style="border-right: none;">COMPONENTE CURRICULAR</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+
+                            </tr>
+                            <tr>
+
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
                 <div class="modal-menus3">
                     <label for="competencia">Competência Específica</label>
                     <select name="competencia" id="competencia">
                         <option value=""></option>
                     </select>
+                    <input type="submit" class="but" value="Enviar" id="btn-enviar" name="btn-enviar1">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>DATA INICIAL</th>
+                                <th>DATA FINAL</th>
+                                <th>ESCOLA</th>
+                                <th>TURMA</th>
+                                <th style="border-right: none;">COMPONENTE CURRICULAR</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+
+                            </tr>
+                            <tr>
+
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
                 <div class="modal-menus4">
                     <label for="habilidade">Habilidades</label>
                     <select name="habilidade" id="habilidade">
                         <option value=""></option>
                     </select>
+                    <input type="submit" class="but" value="Enviar" id="btn-enviar" name="btn-enviar1">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>DATA INICIAL</th>
+                                <th>DATA FINAL</th>
+                                <th>ESCOLA</th>
+                                <th>TURMA</th>
+                                <th style="border-right: none;">COMPONENTE CURRICULAR</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+
+                            </tr>
+                            <tr>
+
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
                 <div class="modal-menus5">
-                    <label for="dev-plano">ALgumma coisa</label>
+                    <label for="dev-plano">Planos</label>
                     <textarea name="" id="dev-plano" cols="30" rows="7"></textarea>
-                    <label for="dev-plano2">Atividades xvzxvzxv</label>
+                    <label for="dev-plano2">Atividades</label>
                     <textarea name="" id="dev-plano" cols="30" rows="7"></textarea>
                     <label for="dev-plano3">Metodologia</label>
                     <textarea name="" id="dev-plano" cols="30" rows="7"></textarea>
                     <label for="dev-plano4">Avaliação</label>
                     <textarea name="" id="dev-plano" cols="30" rows="7"></textarea>
-                    
                 </div>
                 <div class="modal-menus6">
                     <label for="obs">Observações</label>
                     <textarea name="" id="" cols="30" rows="7"></textarea>
+                    <input type="submit" class="but" value="Enviar" id="btn-enviar" style="margin-top: 10px;"
+                        name="btn-enviar1">
                 </div>
-                <input type="submit" class="but" value="Enviar" id="btn-enviar">
+                <div class="enviar" style="display: grid;">
+                    <input type="submit" class="but" value="Salvar" id="btn-enviar2" style="margin-top: 40px;"
+                        name="btn-enviar2">
+                </div>
+
             </form>
             <div class="butoes">
                 <button class="but" id="btn-turma" onclick="voltarTurma()">Turma</button>
@@ -226,4 +309,5 @@
     </div>
     <script src="script.js"></script>
 </body>
+
 </html>
